@@ -5,6 +5,7 @@
 #include "ray.h"
 
 bool hit_sphere(const point3& center, double radius, const ray& r) {
+    //checks for intersection by seeing if solution exists using the discriminant(quadratic equation)
     vec3 oc = center - r.origin();
     auto a = dot(r.direction(), r.direction());
     auto b = -2.0 * dot(r.direction(), oc);
